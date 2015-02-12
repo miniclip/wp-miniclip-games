@@ -1,0 +1,109 @@
+@mc-color:#09f;
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+.mc-clear() {
+	*zoom:1;
+
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+.mc-game-popup {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	width:100%;
+	height:100%;
+	z-index:99999;
+	background:rgba(0,0,0,0.8);
+	text-align:center;
+	display:none;
+
+	.admin-bar & {
+		top:32px;
+	}
+
+	iframe {
+		margin-top:20px;
+		border:5px solid #000 !important;
+	}
+
+	.mc-close-button {
+		color:#fff;
+		font-weight:bold;
+		position:absolute;
+		top:8px;
+		right:8px;
+		border-radius:5px;
+		width:24px;
+		height:24px;
+		line-height:24px;
+		background:#000;
+		border:2px solid #ddd;
+		text-decoration:none;
+	}
+}
+
+a.mc-game-play {
+
+	* {
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	padding:10px 20px 10px 10px;
+	border-radius:5px;
+	display:block;
+	margin-bottom:10px;
+	font-weight:bold;
+	line-height:50px;
+	background:lighten(@mc-color, 45%);
+	color:@mc-color;
+	text-decoration:none;
+	position:relative;
+
+	&:after {
+		content:'';
+		position:absolute;
+		top:50%;
+		right:20px;
+		border:10px solid transparent;
+		border-left-color:@mc-color;
+		border-right-width:0;
+		margin-top:-10px;
+	}
+
+	img {
+		width:auto;
+		height:50px;
+		float:left;
+		margin-right:10px;
+		border-radius:3px;
+		border:2px solid #fff;
+
+	}
+}
+
+@media only screen and (max-width: 782px) {
+
+	.admin-bar .mc-game-popup {
+		top:46px;
+	}
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+	.admin-bar .mc-game-popup {
+		top:0;
+	}
+
+}
