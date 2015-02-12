@@ -1,12 +1,14 @@
 <?php
 
 /**
- *
+ * Miniclip Games
+ * A class that makes it easy to consume the Miniclip API data
  */
 class miniclip_games {
 
 	// default language
 	private $language = 'en';
+
 
 	/**
 	 *
@@ -17,6 +19,7 @@ class miniclip_games {
 		$this->language = substr( get_locale(), 0, 2 );
 
 	}
+
 
 	/**
 	 * Get the data for a specific game
