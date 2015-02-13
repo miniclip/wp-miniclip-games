@@ -1,4 +1,6 @@
 @mc-color:#09f;
+@mc-white:#fff;
+@mc-black:#000;
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 .mc-clear() {
@@ -32,11 +34,11 @@
 
 	iframe {
 		margin-top:20px;
-		border:5px solid #000 !important;
+		border:5px solid @mc-black !important;
 	}
 
 	.mc-close-button {
-		color:#fff;
+		color:@mc-black;
 		font-weight:bold;
 		position:absolute;
 		top:8px;
@@ -45,8 +47,7 @@
 		width:24px;
 		height:24px;
 		line-height:24px;
-		background:#000;
-		border:2px solid #ddd;
+		background:@mc-white;
 		text-decoration:none;
 	}
 }
@@ -58,7 +59,7 @@ a.mc-game-play {
 		box-sizing:border-box;
 	}
 
-	padding:10px 20px 10px 10px;
+	padding:6px 16px 6px 6px;
 	border-radius:5px;
 	display:block;
 	margin-bottom:10px;
@@ -68,6 +69,8 @@ a.mc-game-play {
 	color:@mc-color;
 	text-decoration:none;
 	position:relative;
+	border:2px solid lighten(@mc-color, 45%);
+	text-align:left;
 
 	&:after {
 		content:'';
@@ -86,8 +89,16 @@ a.mc-game-play {
 		float:left;
 		margin-right:10px;
 		border-radius:3px;
-		border:2px solid #fff;
+		border:2px solid @mc-white;
 
+	}
+
+	&:hover {
+		background:@mc-white;
+
+		&:after {
+			border-left-color:darken( @mc-color, 20% );
+		}
 	}
 }
 

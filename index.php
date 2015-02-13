@@ -6,7 +6,7 @@
   Author: Miniclip SA
   Author URI: http://www.miniclip.com/
   Text Domain: mc-games
-  Version: 1.0.3
+  Version: 1.2
 
   Copyright 2014 Miniclip SA
 
@@ -27,9 +27,21 @@
   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
+
+/**
+ * Wishlist
+ *
+ * screenshots showing it in action
+ * sidebar widgets for games from categories
+ * shortcode for games from categories
+ */
+
 include( 'library.php' );
-include( 'shortcode.php' );
+include( 'inc/shortcode.php' );
+include( 'inc/widget-category.php' );
+
 define( 'MCG_SCRIPT_VERSION', '1.0.3' );
+
 
 /**
  * enqueue scripts and styles needed for the plugin to function
